@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Boostrap 4.0-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--Glyphicons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"></h1>
+            <h1 class="display-4">
+                <i class="fas fa-fire"></i>Hot Restaurant</h1>
+            <p class="lead">Make your reservation</p>
+            <hr class="my-4">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="view.html" role="button">
+                    <i class="far fa-list-alt"></i>View Tables</a>
+                <a class="btn btn-danger btn-lg" href="index.html" role="button">
+                    <i class="far fa-credit-card"></i>Home</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                Current Reservations</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" placeholder="Name">
+                        <label for="inputPhone">Phone Number</label>
+                        <input type="number" class="form-control" placeholder="Phone Number">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" placeholder="Email Address">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <p>
+            <a href="/api/#">API Table Link</a>
+            |
+            <a href="/api/#">API Waitlist</a>
+        </p>
+    </div>
+
+</body>
+
+</html>
