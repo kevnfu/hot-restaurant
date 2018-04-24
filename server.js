@@ -7,6 +7,9 @@ const PORT = process.env.port || 3000;
 
 let app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 app.get('/', function(req, res) {
   // send index file
   res.sendFile(path.join(__dirname, 'index.html'));
@@ -34,7 +37,6 @@ app.get('/api/waitlist', function(req, res) {
   });
 });
 
-app.use('/api/tables', bodyParser.json());
 
 // add data
 app.post('/api/tables', function(req, res) {
@@ -52,9 +54,9 @@ app.post('/api/tables', function(req, res) {
 
     // reservation?
     if(data.length > 5) {
-      res.json({"waitlist": false});
-    } else {
       res.json({"waitlist": true});
+    } else {
+      res.json({"waitlist": false});
     }
   });
   
