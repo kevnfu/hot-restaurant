@@ -9,14 +9,15 @@ let app = express();
 
 app.get('/', function(req, res) {
   // send index file
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/reserve', function(req, res) {
-
+  res.sendFile(path.join(__dirname, 'reservation.html'));
 });
 
 app.get('/tables', function(req, res) {
-  
+    res.sendFile(path.join(__dirname, 'view.html'));
 });
 
 app.get('/api/tables', function(req, res) {
