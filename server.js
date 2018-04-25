@@ -9,6 +9,7 @@ let app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'static')));
 
 app.get('/', function(req, res) {
   // send index file
@@ -26,7 +27,7 @@ app.get('/tables', function(req, res) {
 app.get('/api/tables', function(req, res) {
   fs.readFile('data.js', 'utf8', function(err, data) {
     // return first 5
-    res.json(JSON.parse(data).slice(0, 4));
+    res.json(JSON.parse(data).slice(0, 5));
   });
 });
 
